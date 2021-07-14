@@ -1,0 +1,386 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.wrapper {
+  overflow-x: hidden;
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  z-index: 5;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  border-bottom: 2px solid #000;
+  background-color: #fff;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 0;
+  z-index: 10;
+  background-color: #000;
+  color: #fff;
+  overflow-x: hidden;
+  transition: all 0.5s linear;
+}
+
+.active {
+  width: 250px;
+}
+
+.hidden {
+  display: none;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.main {
+  min-height: 100vh;
+  padding-top: calc(2em + 80px);
+}
+
+.column, .column__box, .column__box__list, .column--inner {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.column--inner {
+  padding: 0;
+}
+.column--inner .close {
+  padding: 0.55em;
+}
+.column--dark {
+  background: #000;
+  color: #fff;
+}
+
+.column__box, .column__box__list {
+  margin: 1em 0;
+  padding: 1em;
+  border: 2px solid #000;
+}
+
+.column__box__list {
+  list-style: none;
+}
+.column__box__list li {
+  position: relative;
+  padding: 0.3em 1em;
+  font-size: 1.2em;
+}
+.column__box__list li::before {
+  content: "›";
+  position: absolute;
+  left: 0em;
+  font-weight: bold;
+}
+
+.borderless {
+  border: none;
+  margin-top: 0;
+}
+
+.column__box__icon {
+  height: 5em;
+  width: 5em;
+  border-radius: 50%;
+  align-self: center;
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #070085;
+  color: #fff;
+}
+
+.column__el--center {
+  align-self: center;
+}
+
+.column__title--main {
+  font-size: 2.8em;
+  margin-bottom: 0.5em;
+  color: #070085;
+}
+.column__title--medium {
+  font-size: 1.5em;
+  margin: 0.5em 0;
+  color: #070085;
+}
+.column__title--small {
+  text-transform: uppercase;
+}
+
+.column__par--main {
+  line-height: 1.3em;
+  font-size: 1.25em;
+  padding: 1em 0;
+  margin-bottom: 1em;
+}
+.column__par--normal {
+  font-size: 1.1em;
+  line-height: 1.3em;
+}
+
+.question-text {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.3em 0;
+}
+
+.question-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s linear;
+}
+.question-answer--open {
+  padding: 0.2em;
+}
+
+.column--inner__formEl {
+  padding: 1em;
+  margin-top: 0.3em;
+  margin-bottom: 1em;
+  border: none;
+  background-color: #f4f4f4;
+}
+.column--inner__formEl:focus {
+  outline: none;
+}
+
+.btn {
+  padding: 1em 0.5em;
+  background-color: #070085;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+
+.img {
+  object-fit: fill;
+  margin: 1em 0;
+}
+
+.img--round {
+  width: 150px;
+  height: 150px;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+
+.img--rectangle {
+  width: 300px;
+  height: auto;
+}
+
+.scroll {
+  color: #070085;
+  text-decoration: none;
+  cursor: pointer;
+}
+.scroll:visited {
+  color: #070085;
+}
+
+.scroll--white {
+  color: #fff;
+}
+.scroll--white:hover {
+  color: #070085;
+}
+
+@media screen and (min-width: 425px) {
+  .hidden {
+    display: block;
+  }
+
+  .contact .hidden,
+.footer .hidden {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .row {
+    flex-direction: row;
+  }
+  .row--reverse {
+    flex-direction: row-reverse;
+  }
+
+  .row__text {
+    display: inherit;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-right: 1em;
+  }
+
+  .row__text--reverse {
+    display: inherit;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 1em;
+  }
+
+  .column__box, .column__box__list {
+    margin: 0 0.3em;
+  }
+
+  .column__box__list {
+    height: auto;
+    margin-top: 1em;
+  }
+
+  .company .row {
+    flex-direction: column;
+    margin-bottom: 3em;
+  }
+  .company .row__text {
+    width: 50%;
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .column, .column--inner, .column__box, .column__box__list {
+    padding: 1em 2.5em;
+  }
+
+  .menu,
+.close {
+    display: none;
+  }
+
+  .nav {
+    position: unset;
+    width: 100%;
+    background: #fff;
+    color: #000;
+    overflow-x: visible;
+    padding: 0;
+  }
+  .nav .column__box__list {
+    flex-direction: row;
+    align-self: center;
+    margin: 0;
+    padding: 0;
+  }
+  .nav .column__box__list li {
+    padding-right: 0;
+  }
+  .nav .column__box__list li::before {
+    display: none;
+  }
+
+  .company .row {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .company .row__text {
+    padding: 0;
+    margin-right: 0;
+    justify-content: center;
+  }
+
+  .scroll--white {
+    color: #000;
+  }
+
+  .main .row__text {
+    margin-right: 2.2em;
+  }
+  .main .row__text .img--rectangle {
+    width: 380px;
+    align-self: flex-end;
+  }
+
+  .column__title--main {
+    font-size: 3.3em;
+  }
+  .column__title--medium {
+    font-size: 2.3em;
+  }
+  .column__title--small {
+    font-size: 1em;
+  }
+
+  .column__par--main {
+    font-size: 1.4em;
+  }
+  .column__par--normal {
+    font-size: 1.3em;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .main .row {
+    justify-content: space-between;
+  }
+  .main .row__text {
+    width: 50%;
+  }
+  .main .row__text .img--rectangle {
+    width: 430px;
+    height: 100%;
+  }
+
+  .column__box, .column__box__list {
+    padding: 3em 1em;
+  }
+
+  .img--round {
+    width: 300px;
+    height: 300px;
+  }
+  .img--rectangle {
+    width: 380px;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .contact .column, .contact .column--inner, .contact .column__box, .contact .column__box__list {
+    width: 100%;
+  }
+  .contact .column--inner {
+    padding: 0;
+  }
+  .contact .hidden {
+    display: block;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .footer .column, .footer .column--inner, .footer .column__box, .footer .column__box__list {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer .column__box__list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer .hidden {
+    display: block;
+  }
+}/*# sourceMappingURL=style.css.map */
