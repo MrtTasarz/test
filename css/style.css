@@ -255,7 +255,6 @@
     margin-bottom: 3em;
   }
   .company .row__text {
-    width: 50%;
     margin-right: 0;
   }
 }
@@ -295,6 +294,7 @@
     justify-content: space-between;
   }
   .company .row__text {
+    width: 50%;
     padding: 0;
     margin-right: 0;
     justify-content: center;

@@ -42,7 +42,6 @@
       flex-direction: column;
       margin-bottom: 3em;
       &__text {
-        width: 50%;
         margin-right: 0;
       }
     }
@@ -84,6 +83,7 @@
       flex-direction: row;
       justify-content: space-between;
       &__text {
+        width: 50%;
         padding: 0;
         margin-right: 0;
         justify-content: center;
