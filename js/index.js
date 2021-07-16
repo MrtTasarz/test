@@ -11,10 +11,10 @@ const toggleAnswer = (e) => {
   const answer = e.target.parentElement.nextElementSibling
   answer.classList.toggle('question-answer--open')
   if (answer.style.maxHeight) {
-    e.target.style.transform = 'rotate(0)'
+    e.target.classList.remove('rotate')
     answer.style.maxHeight = null;
   } else {
-    e.target.style.transform = 'rotate(45deg)'
+    e.target.classList.add('rotate')
     answer.style.maxHeight = answer.scrollHeight + "px";
   }
 }

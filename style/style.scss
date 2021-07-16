@@ -38,6 +38,28 @@
   color: $secondary;
   overflow-x: hidden;
   transition: all 0.5s linear;
+
+  @media screen and (min-width: 1024px) {
+    position: unset;
+    width: 100%;
+    background: $secondary;
+    color: $primary;
+    overflow-x: visible;
+    padding: 0;
+    .column__box__list {
+      flex-direction: row;
+      align-self: center;
+      margin: 0;
+      padding: 0;
+
+      li {
+        padding-right: 0;
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 .active {
@@ -46,10 +68,20 @@
 
 .hidden {
   display: none;
+
+  @media screen and (min-width: 425px) {
+    display: block;
+  }
 }
 
 .icon {
   cursor: pointer;
+  transform: rotate(0);
+  transition: transform 0.5s linear;
+}
+
+.rotate {
+  transform: rotate(45deg);
 }
 
 // main
@@ -63,6 +95,11 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+
+  @media screen and (min-width: 1024px) {
+    padding: 16px 40px;
+  }
+
   &--inner {
     @extend .column;
     padding: 0;
@@ -81,11 +118,25 @@
   margin: 1em 0;
   padding: 1em;
   border: 2px solid $primary;
+
+  @media screen and (min-width: 768px) {
+    margin: 0 5px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding: 48px 16px;
+  }
 }
 
 .column__box__list {
   @extend .column__box;
   list-style: none;
+
+  @media screen and (min-width: 768px) {
+    height: auto;
+    margin-top: 16px;
+  }
+
   li {
     position: relative;
     padding: 0.3em 1em;
@@ -126,14 +177,26 @@
     font-size: 2.8em;
     margin-bottom: 0.5em;
     color: $detail;
+
+    @media screen and (min-width: 1024px) {
+      font-size: 3.3em;
+    }
   }
   &--medium {
     font-size: 1.5em;
     margin: 0.5em 0;
     color: $detail;
+
+    @media screen and (min-width: 1024px) {
+      font-size: 2.3em;
+    }
   }
   &--small {
     text-transform: uppercase;
+
+    @media screen and (min-width: 1024px) {
+      font-size: 1em;
+    }
   }
 }
 
@@ -143,10 +206,18 @@
     font-size: 1.25em;
     padding: 1em 0;
     margin-bottom: 1em;
+
+    @media screen and (min-width: 1024px) {
+      font-size: 1.4em;
+    }
   }
   &--normal {
     font-size: 1.1em;
     line-height: 1.3em;
+
+    @media screen and (min-width: 1024px) {
+      font-size: 1.3em;
+    }
   }
 }
 
@@ -200,11 +271,20 @@
   height: 150px;
   border: 1px solid $primary;
   border-radius: 50%;
+
+  @media screen and (min-width: 1440px) {
+    width: 300px;
+    height: 300px;
+  }
 }
 
 .img--rectangle {
   width: 300px;
   height: auto;
+
+  @media screen and (min-width: 1440px) {
+    width: 380px;
+  }
 }
 
 .scroll {
@@ -220,6 +300,10 @@
   color: $secondary;
   &:hover {
     color: $detail;
+  }
+
+  @media screen and (min-width: 1024px) {
+    color: $primary;
   }
 }
 @import "_media";

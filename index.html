@@ -8,10 +8,9 @@
       src="https://kit.fontawesome.com/0a74417982.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="css/glide.core.min.css" />
     <link
       rel="stylesheet"
-      href="node_modules/@glidejs/glide/dist/css/glide.core.min.css"
+      href="https://unpkg.com/@glidejs/glide@3.3.0/dist/css/glide.core.min.css"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -327,7 +326,6 @@
               id="fname"
               name="fname"
               class="column--inner__formEl"
-              name="name"
             />
             <label for="surname" class="column__title--small">Nazwisko:</label>
             <input
@@ -335,7 +333,6 @@
               id="surname"
               name="surname"
               class="column--inner__formEl"
-              name="surname"
             />
             <label for="phone" class="column__title--small"
               >Numer telefonu:</label
@@ -345,7 +342,6 @@
               id="phone"
               name="phone"
               class="column--inner__formEl"
-              name="phone"
             />
             <label for="email" class="column__title--small">Email:</label>
             <input
@@ -362,7 +358,6 @@
               cols="30"
               rows="10"
               class="column--inner__formEl"
-              name="message"
             ></textarea>
             <input
               type="submit"
@@ -401,54 +396,9 @@
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
-    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
-    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
-    <script>
-      const config = {
-        type: "carousel",
-        startAt: 0,
-        perView: 4,
-        autoplay: 3000 | true,
-        breakpoints: {
-          300: {
-            perView: 1,
-          },
-          425: {
-            perView: 1,
-          },
-          768: {
-            perView: 2,
-          },
-          1024: {
-            perView: 3,
-          },
-          1440: {
-            perView: 3,
-          },
-        },
-      };
-      const opconfig = {
-        type: "carousel",
-        startAt: 0,
-        perView: 1,
-        autoplay: 3000 | true,
-      };
-      new Glide(".glide", config).mount();
-    </script>
-    <script>
-      $(".scroll").on("click", function (event) {
-        if (this.hash !== "") {
-          event.preventDefault();
-          const hash = this.hash;
-          $("html, body").animate(
-            {
-              scrollTop: $(hash).offset().top - 90,
-            },
-            500
-          );
-        }
-      });
-    </script>
+    <script src="https://unpkg.com/@glidejs/glide@3.3.0/dist/glide.min.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/scroll.js"></script>
     <script src="index.js"></script>
   </body>
 </html>
