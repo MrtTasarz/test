@@ -109,6 +109,10 @@
   color: #fff;
 }
 
+.nav.column--inner {
+  margin: 0;
+}
+
 .column__box, .column__box__list {
   border: 2px solid #000;
 }

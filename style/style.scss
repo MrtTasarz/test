@@ -113,6 +113,10 @@
   }
 }
 
+.nav.column--inner {
+  margin: 0;
+}
+
 .column__box {
   @extend .column;
   border: 2px solid $primary;
