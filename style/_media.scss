@@ -17,14 +17,17 @@
   .row__text {
     display: inherit;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: flex-end;
     margin-right: 1em;
+    &--main {
+      justify-content: flex-start;
+    }
   }
 
   .row__text--reverse {
     display: inherit;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: flex-end;
     margin-left: 16px;
   }
 
@@ -36,6 +39,10 @@
       &__text {
         margin-right: 0;
       }
+    }
+
+    .row__text--reverse {
+      margin-left: 0;
     }
   }
 }
@@ -50,6 +57,7 @@
     .row {
       flex-direction: row;
       justify-content: space-between;
+      align-items: flex-end;
       &__text {
         width: 50%;
         padding: 0;

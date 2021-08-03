@@ -10,7 +10,7 @@
     ></script>
     <link
       rel="stylesheet"
-      href="https://unpkg.com/@glidejs/glide@3.3.0/dist/css/glide.core.min.css"
+      href="node_modules/@glidejs/glide/dist/css/glide.core.min.css"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,26 +31,26 @@
           <nav class="nav column--inner" id="nav">
             <i class="fas fa-times fa-2x close" id="closeMenu"></i>
             <ul class="column__box__list borderless">
-              <li>
+              <li class="list__item">
                 <a
                   href="#company"
                   class="scroll scroll--white column__title--small"
                   >O firmie</a
                 >
               </li>
-              <li>
+              <li class="list__item">
                 <a
                   href="#offer"
                   class="scroll scroll--white column__title--small"
                   >Oferta</a
                 >
               </li>
-              <li>
+              <li class="list__item">
                 <a href="#faq" class="scroll scroll--white column__title--small"
                   >FAQ</a
                 >
               </li>
-              <li>
+              <li class="list__item">
                 <a
                   href="#contact"
                   class="scroll scroll--white column__title--small"
@@ -65,23 +65,25 @@
       <!-- main -->
       <main class="main" id="home">
         <div class="column row">
-          <div class="row__text">
-            <h1 class="column__title--main">Lorem ipsum dolor sit amet.</h1>
-            <p class="column__par--main">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
-              iusto consectetur culpa fuga qui consequuntur aut soluta autem
-              quae possimus. Lorem ipsum dolor sit amet consectetur, adipisicing
-              elit. Eaque placeat asperiores labore porro voluptates et
-              voluptatibus incidunt dolores, facilis blanditiis! Lorem ipsum
-              dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor
-              sit amet.
-            </p>
+          <div class="row__text row__text--main">
+            <h1 class="column__title--main">Mobilne toalety</h1>
+            <ul class="column__box__list borderless column__par--main">
+              <li class="list__item">Masz ogródek działkowy?</li>
+              <li class="list__item">Pracujesz na placu budowy?</li>
+              <li class="list__item">Budujesz dom?</li>
+              <li class="list__item">Prowadzisz camping?</li>
+              <li class="list__item">Organizujesz imprezy plenerowe?</li>
+              <li class="list__item--basic">
+                Jeśli na jedno z tych pytań, odpowiedź brzmi
+                <span>TAK</span> to znak, że jesteś we właściwym miejscu!
+              </li>
+            </ul>
           </div>
           <div class="row__text">
             <img
-              src="img/yellow.jpg"
+              src="img/DSC_0053 (1).jpg"
               alt="produkt_1"
-              class="img img--rectangle column__el--center hidden"
+              class="img img--rectangle img--main column__el--center hidden"
             />
           </div>
         </div>
@@ -96,66 +98,85 @@
         <div class="column row">
           <div class="column--inner row__text">
             <h5 class="column__title--small">O firmie</h5>
-            <h3 class="column__title--medium">Nasza historia</h3>
+            <h3 class="column__title--medium">Kim jestem?</h3>
             <img
               class="img--round img column__el--center"
               src="./img/035.png"
               alt="illustration"
             />
-          </div>
-          <div class="row__text">
+            <p class="column__par--normal">Mężem, ojcem i byłym handlowcem.</p>
+            <div class="line column__el--center hidden"></div>
             <p class="column__par--normal">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
-              architecto commodi corporis sapiente doloribus molestiae earum
-              quas, repellendus illum ea repellat deserunt nobis consequuntur et
-              explicabo dolorem sit provident ipsum laboriosam deleniti
-              quibusdam a reprehenderit sint? Laudantium vitae quod quos.
+              Przez ponad 10 lat zajmowałem się handlem w polskiej firmie
+              produkcyjnej. Większość tygodnia spędzałem w trasie, co zaczęło
+              być męczące. Potrzeba zmiany, obserwacja otaczającej nas
+              rzeczywistości i kierunku na niektórych rynkach, pchnęły mnie do
+              porzucenia standardowej pracy korpo ludka i zajęcia się tym, o
+              czym dotychczas nieśmiało myślałem.
             </p>
-            <br />
+          </div>
+          <div class="column--inner row__text row__text--reverse">
+            <div class="line column__el--center"></div>
             <p class="column__par--normal">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum id
-              adipisci veniam velit nulla voluptatem ex doloremque neque,
-              laudantium enim labore error autem earum placeat ea explicabo vero
-              unde?
+              W ciągu kilku miesięcy wybudowałem dom na kółkach! Sam, własnymi
+              rękami i bez pomocy fachowców. Projekt dedykowany przede wszystkim
+              dla mojej rodziny. Obecnie domek stoi w nadmorskiej miejscowości,
+              a my mamy frajde, że mamy coś swojego, co jest przestronne,
+              wygodne i NASZE. W domku nie ma jednak toalety, więc w
+              międzyczasie pojawił się pomysł na stworzenie własnej, mobilnej
+              łazienki i kabiny z WC. Ten produkt mogę Ci dziś zaproponować.
+              Prototyp zakładał osobne pomieszczenie 2w1 WC i umywalkę, oraz
+              osobne z samym prysznicem. Z racji tego, że budowane przeze mnie
+              toalety są przestronne, niektórzy moi klienci decydują się na
+              opcję 3w1. Oczywiście szczegóły zamówienia i Twoje potrzeby,
+              omówimy już w czasie rozmowy.
             </p>
           </div>
         </div>
       </section>
       <!-- zalety -->
       <section>
-        <div class="column row">
-          <div class="column__box">
-            <div class="column__box__icon">
-              <i class="fas fa-eye fa-2x"></i>
+        <div class="column">
+          <h5 class="column__title--small">Zalety</h5>
+          <div class="grid">
+            <div class="column__box">
+              <div class="column__box__icon">
+                <i class="fas fa-toilet"></i>
+              </div>
+              <h5 class="column__title--small">Mobilne</h5>
             </div>
-            <h3 class="column__title--medium">Lorem ipsum</h3>
-            <p class="column__par--normal">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi
-              magnam error iusto ipsam necessitatibus expedita! Suscipit
-              architecto quod vel facilis.
-            </p>
-          </div>
-          <div class="column__box">
-            <div class="column__box__icon">
-              <i class="fas fa-eye fa-2x"></i>
+            <div class="column__box">
+              <div class="column__box__icon">
+                <i class="fas fa-couch"></i>
+              </div>
+              <h5 class="column__title--small">Wygodne</h5>
             </div>
-            <h3 class="column__title--medium">Lorem ipsum</h3>
-            <p class="column__par--normal">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi
-              magnam error iusto ipsam necessitatibus expedita! Suscipit
-              architecto quod vel facilis.
-            </p>
-          </div>
-          <div class="column__box">
-            <div class="column__box__icon">
-              <i class="fas fa-eye fa-2x"></i>
+            <div class="column__box">
+              <div class="column__box__icon">
+                <i class="fas fa-hand-sparkles"></i>
+              </div>
+              <h5 class="column__title--small">Schludne</h5>
             </div>
-            <h3 class="column__title--medium">Lorem ipsum</h3>
-            <p class="column__par--normal">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi
-              magnam error iusto ipsam necessitatibus expedita! Suscipit
-              architecto quod vel facilis.
-            </p>
+            <div class="column__box">
+              <div class="column__box__icon">
+                <i class="fas fa-user"></i>
+              </div>
+              <h5 class="column__title--small">
+                Dostosowane do Towich potrzeb
+              </h5>
+            </div>
+            <div class="column__box">
+              <div class="column__box__icon">
+                <i class="fas fa-check"></i>
+              </div>
+              <h5 class="column__title--small">Łatwe w obsłudze</h5>
+            </div>
+            <div class="column__box">
+              <div class="column__box__icon">
+                <i class="fas fa-leaf"></i>
+              </div>
+              <h5 class="column__title--small">Ekologiczne</h5>
+            </div>
           </div>
         </div>
       </section>
@@ -166,9 +187,9 @@
           <h3 class="column__title--medium">Nasze produkty</h3>
           <div class="column--inner row">
             <img
-              src="/img/pink.png"
+              src="/img/2 (2).jpg"
               alt="produkt_1"
-              class="column__el--center img img--rectangle"
+              class="column__el--center img img--rectangle row__text"
             />
             <div class="row__text--reverse">
               <h3 class="column__title--medium">Lorem</h3>
@@ -182,18 +203,18 @@
                 magni nam ea.
               </p>
               <ul class="column__box__list">
-                <li>Height: lorem ipsum</li>
-                <li>Width: lorem ipsum</li>
-                <li>Depth: lorem ipsum</li>
-                <li>Weight: lorem ipsum</li>
+                <li class="list__item">Height: lorem ipsum</li>
+                <li class="list__item">Width: lorem ipsum</li>
+                <li class="list__item">Depth: lorem ipsum</li>
+                <li class="list__item">Weight: lorem ipsum</li>
               </ul>
             </div>
           </div>
           <div class="column--inner row--reverse">
             <img
-              src="/img/yellow.jpg"
+              src="/img/DSC_0053 (1).jpg"
               alt="produkt_2"
-              class="column__el--center img img--rectangle"
+              class="column__el--center img img--rectangle row__text--reverse"
             />
             <div class="row__text">
               <h3 class="column__title--medium">Lorem</h3>
@@ -207,10 +228,10 @@
                 magni nam ea.
               </p>
               <ul class="column__box__list">
-                <li>Height: lorem ipsum</li>
-                <li>Width: lorem ipsum</li>
-                <li>Depth: lorem ipsum</li>
-                <li>Weight: lorem ipsum</li>
+                <li class="list__item">Height: lorem ipsum</li>
+                <li class="list__item">Width: lorem ipsum</li>
+                <li class="list__item">Depth: lorem ipsum</li>
+                <li class="list__item">Weight: lorem ipsum</li>
               </ul>
             </div>
           </div>
@@ -221,38 +242,60 @@
                 <li class="glide__slide column--inner">
                   <img
                     class="img img--rectangle column__el--center"
-                    src="img/blue.png"
+                    src="img/DSC_0018 (1).jpg"
                     alt="produkt1"
                   />
                 </li>
                 <li class="glide__slide column--inner">
                   <img
                     class="img img--rectangle column__el--center"
-                    src="img/pink.png"
+                    src="img/DSC_0045 (1).jpg"
                     alt="produkt2"
                   />
                 </li>
                 <li class="glide__slide column--inner">
                   <img
                     class="img img--rectangle column__el--center"
-                    src="img/yellow.jpg"
+                    src="img/2 (2).jpg"
                     alt="produkt3"
                   />
                 </li>
                 <li class="glide__slide column--inner">
                   <img
                     class="img img--rectangle column__el--center"
-                    src="img/violet.png"
+                    src="img/DSC_0053 (1).jpg"
+                    alt="produkt4"
+                  />
+                </li>
+                <li class="glide__slide column--inner">
+                  <img
+                    class="img img--rectangle column__el--center"
+                    src="img/DSC_0078 (1).jpg"
+                    alt="produkt4"
+                  />
+                </li>
+                <li class="glide__slide column--inner">
+                  <img
+                    class="img img--rectangle column__el--center"
+                    src="img/DSC_0080 (1).jpg"
+                    alt="produkt4"
+                  />
+                </li>
+                <li class="glide__slide column--inner">
+                  <img
+                    class="img img--rectangle column__el--center"
+                    src="img/DSC_0011.JPG"
+                    alt="produkt4"
+                  />
+                </li>
+                <li class="glide__slide column--inner">
+                  <img
+                    class="img img--rectangle column__el--center"
+                    src="img/2 (1).jpg"
                     alt="produkt4"
                   />
                 </li>
               </ul>
-            </div>
-            <div class="glide__bullets" data-glide-el="controls[nav]">
-              <button class="glide__bullet" data-glide-dir="=0"></button>
-              <button class="glide__bullet" data-glide-dir="=1"></button>
-              <button class="glide__bullet" data-glide-dir="=2"></button>
-              <button class="glide__bullet" data-glide-dir="=3"></button>
             </div>
           </div>
         </div>
@@ -262,7 +305,7 @@
         <div class="column">
           <h3 class="column__title--medium">FAQ</h3>
           <ul class="column__box__list borderless">
-            <li>
+            <li class="list__item">
               <div class="question">
                 <div class="question-text">
                   <h5 class="column__title--small">Lorem ipsum do?</h5>
@@ -277,7 +320,7 @@
                 </div>
               </div>
             </li>
-            <li>
+            <li class="list__item">
               <div class="question">
                 <div class="question-text">
                   <h5 class="column__title--small">Lorem ipsum do?</h5>
@@ -292,7 +335,7 @@
                 </div>
               </div>
             </li>
-            <li>
+            <li class="list__item">
               <div class="question">
                 <div class="question-text">
                   <h5 class="column__title--small">Lorem ipsum do?</h5>
@@ -373,11 +416,11 @@
       <footer class="footer">
         <div class="column column--dark">
           <ul class="column__box__list borderless">
-            <li>Nazwa firmy</li>
-            <li>Adres firmy</li>
-            <li>Adres firmy</li>
-            <li>Telefon kontaktowy</li>
-            <li>Adres mailowy</li>
+            <li class="list__item">Nazwa firmy</li>
+            <li class="list__item">Adres firmy</li>
+            <li class="list__item">Adres firmy</li>
+            <li class="list__item">Telefon kontaktowy</li>
+            <li class="list__item">Adres mailowy</li>
           </ul>
           <iframe
             class="hidden"
@@ -396,9 +439,9 @@
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
-    <script src="https://unpkg.com/@glidejs/glide@3.3.0/dist/glide.min.js"></script>
+    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/scroll.js"></script>
-    <script src="index.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
