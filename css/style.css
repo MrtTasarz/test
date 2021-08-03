@@ -84,7 +84,7 @@
 
 .main {
   min-height: 100vh;
-  padding-top: 90px;
+  padding-top: 80px;
 }
 
 .column, .column__box, .column__box__list, .column--inner {
@@ -368,13 +368,13 @@
 
 @media screen and (min-width: 1024px) {
   .img--main {
-    height: 450px;
+    height: 425px;
     object-fit: contain;
   }
 }
 @media screen and (min-width: 1440px) {
   .img--main {
-    height: 400px;
+    height: 300px;
     object-fit: contain;
   }
 }
@@ -415,6 +415,10 @@
   .scroll--white {
     color: #000;
   }
+}
+
+.margin--zero {
+  margin: 0;
 }
 
 @media screen and (min-width: 425px) {
@@ -487,6 +491,7 @@
 }
 @media screen and (min-width: 1440px) {
   .main .row {
+    padding-bottom: 0;
     justify-content: space-between;
   }
   .main .row__text {

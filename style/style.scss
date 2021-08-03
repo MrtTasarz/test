@@ -87,7 +87,7 @@
 // main
 .main {
   min-height: 100vh;
-  padding-top: 90px;
+  padding-top: 80px;
 }
 
 .column {
@@ -362,7 +362,7 @@
     object-fit: contain;
   }
   @media screen and (min-width: 1440px) {
-    height: 350px;
+    height: 300px;
     object-fit: contain;
   }
 }
@@ -403,5 +403,9 @@
   @media screen and (min-width: 1024px) {
     color: $primary;
   }
+}
+
+.margin--zero {
+  margin: 0;
 }
 @import "_media";
