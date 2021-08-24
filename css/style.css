@@ -102,7 +102,7 @@ body {
   }
 }
 .column--inner {
-  margin: 20px 0;
+  margin: 10px 0;
   padding: 0;
 }
 .column--inner .close {
@@ -161,6 +161,7 @@ body {
 .list__item--basic {
   margin-top: 0.5em;
   font-size: 1.1em;
+  line-height: 1.5em;
 }
 .list__item--basic span {
   color: #5959fa;
@@ -174,6 +175,12 @@ body {
   }
   .list__item--basic .span {
     font-size: 1.4em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .column__box__list.column__par--main .list__item--basic {
+    margin-top: 80px;
   }
 }
 
@@ -263,6 +270,7 @@ body {
   font-size: 1.1em;
   line-height: 1.3em;
   margin: 5px 0;
+  padding: 0 0.2em;
 }
 @media screen and (min-width: 1024px) {
   .column__par--normal {
@@ -317,6 +325,7 @@ body {
 .question-text {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 0.3em 0;
 }
 
