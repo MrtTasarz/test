@@ -309,47 +309,122 @@
         <div class="column">
           <h3 class="column__title--medium">FAQ</h3>
           <ul class="column__box__list borderless">
-            <li class="list__item">
+            <li class="list__item--basic">
               <div class="question">
                 <div class="question-text">
-                  <h5 class="column__title--small">Lorem ipsum do?</h5>
+                  <h5 class="column__title--small list__item">
+                    Jak działa zasilanie wody w prysznicu, w kranie i w muszli?
+                  </h5>
                   <i class="icon fas fa-plus openFaq icon"></i>
                 </div>
                 <div class="question-answer">
                   <p class="column__par--normal">
-                    Lorem ipsum dolor sit consectetur adipisicing elit. Vel
-                    consequuntur dolorem accusantium ex voluptates mollitia
-                    dignissimos. Ipsa illum ab laudantium!
+                    W łazience jest wykonana kompletna instalacja wodno -
+                    kanalizacyjna. ( przyłącza zewnętrzne : kanalizacja 110,
+                    woda 1/2cala). Zamontowana jest końcówka ogrodowa. Woda jest
+                    rozprowadzana instalacją z rur PP zgrzewane.
                   </p>
                 </div>
               </div>
             </li>
-            <li class="list__item">
+            <li class="list__item--basic">
               <div class="question">
                 <div class="question-text">
-                  <h5 class="column__title--small">Lorem ipsum do?</h5>
+                  <h5 class="column__title--small list__item">
+                    Co jest potrzebne do podłączenia wody?
+                  </h5>
                   <i class="icon fas fa-plus openFaq icon"></i>
                 </div>
                 <div class="question-answer">
                   <p class="column__par--normal">
-                    Lorem ipsum dolor sit consectetur adipisicing elit. Vel
-                    consequuntur dolorem accusantium ex voluptates mollitia
-                    dignissimos. Ipsa illum ab laudantium!
+                    Do podłączenia toalety potrzebne jest zewnętrzne źródło
+                    zasilania wody oraz przyłącze kanalizacyjne. Przy łazience
+                    jest zawór 1/2 cała, oraz szybkozłączka ogrodowa 1/2cala.
+                    Toaleta kanalizacja wyjście 110mm Prysznic kanalizacja ma
+                    przyłącze zewnętrzne 50.
                   </p>
                 </div>
               </div>
             </li>
-            <li class="list__item">
+            <li class="list__item--basic">
               <div class="question">
                 <div class="question-text">
-                  <h5 class="column__title--small">Lorem ipsum do?</h5>
+                  <h5 class="column__title--small list__item">
+                    Skąd można wziąć ciepłą wodę?
+                  </h5>
                   <i class="icon fas fa-plus openFaq icon"></i>
                 </div>
                 <div class="question-answer">
                   <p class="column__par--normal">
-                    Lorem ipsum dolor sit consectetur adipisicing elit. Vel
-                    consequuntur dolorem accusantium ex voluptates mollitia
-                    dignissimos. Ipsa illum ab laudantium!
+                    Na dwa sposoby: elektryczny i gazowy.Elektryczny -
+                    podgrzewacz przepływowy 230V 3000W zsynchronizowany z
+                    baterią umywalkową (jest opcja dołożenia słuchawki
+                    prysznicowej), wymaga to zasilenia prądem. Gazowy -
+                    podgrzewacz wody butlą gazową. Od 6 do 18l/min (w zależności
+                    od potrzeb). Ta metoda nie wymaga zasilenia prądem. 
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="list__item--basic">
+              <div class="question">
+                <div class="question-text">
+                  <h5 class="column__title--small list__item">
+                    Do czego trzeba podłączyć toalety?
+                  </h5>
+                  <i class="icon fas fa-plus openFaq icon"></i>
+                </div>
+                <div class="question-answer">
+                  <p class="column__par--normal">
+                    Do szamba lub kanalizacji, czyli do zewnętrznych przyłączy.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="list__item--basic">
+              <div class="question">
+                <div class="question-text">
+                  <h5 class="column__title--small list__item">
+                    Gdzie wypływają ścieki?
+                  </h5>
+                  <i class="icon fas fa-plus openFaq icon"></i>
+                </div>
+                <div class="question-answer">
+                  <p class="column__par--normal">
+                    W toalecie jest wyjście 110, które wymaga przyłącza
+                    zewnętrznego.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="list__item--basic">
+              <div class="question">
+                <div class="question-text">
+                  <h5 class="column__title--small list__item">
+                    Czy moja toaleta dba o środowisko?
+                  </h5>
+                  <i class="icon fas fa-plus openFaq icon"></i>
+                </div>
+                <div class="question-answer">
+                  <p class="column__par--normal">
+                    Toaleta jest wykonana z pojemników "ibc, mauzer" które były
+                    już raz użyte. W ramach recyklingu zostały umyte w
+                    specjalistycznej myjni, dzięki czemu nadają się do ponownego
+                    użycia.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="list__item--basic">
+              <div class="question">
+                <div class="question-text">
+                  <h5 class="column__title--small list__item">Oświetlenie</h5>
+                  <i class="icon fas fa-plus openFaq icon"></i>
+                </div>
+                <div class="question-answer">
+                  <p class="column__par--normal">
+                    Zasilane gazem lub Led na baterie. Zasilana elektrycznie ma
+                    możliwość zamontowania oświetlenia na 230V.
                   </p>
                 </div>
               </div>
@@ -366,6 +441,9 @@
             method="POST"
             data-netlify="true"
             class="column--inner"
+            onsubmit="return setAction(this)"
+            data-netlify-recaptcha="true"
+            id="contact-form"
           >
             <label for="fname" class="column__title--small">Imię:</label>
             <input
@@ -406,8 +484,10 @@
               rows="10"
               class="column--inner__formEl"
             ></textarea>
+            <div data-netlify-recaptcha="true"></div>
             <input
               type="submit"
+              id="submitBn"
               value="Wyślij"
               class="btn column__title--small"
             />
@@ -420,11 +500,9 @@
       <footer class="footer">
         <div class="column column--dark">
           <ul class="column__box__list borderless">
-            <li class="list__item">Nazwa firmy</li>
-            <li class="list__item">Adres firmy</li>
-            <li class="list__item">Adres firmy</li>
-            <li class="list__item">Telefon kontaktowy</li>
-            <li class="list__item">Adres mailowy</li>
+            <li class="column__title--small list__item--basic">Zadzwoń:</li>
+            <li class="list__item">Ramin Hatamnejad</li>
+            <li class="list__item">tel:508-111-935</li>
           </ul>
           <iframe
             class="hidden"

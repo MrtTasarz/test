@@ -5,6 +5,10 @@
   font-family: "Lato", sans-serif;
 }
 
+body {
+  background-color: #fcfcf6;
+}
+
 .wrapper {
   overflow-x: hidden;
 }
@@ -21,7 +25,7 @@
   align-items: center;
   padding: 1em;
   border-bottom: 2px solid #000;
-  background-color: #fff;
+  background-color: #fcfcf6;
 }
 
 .nav {
@@ -32,7 +36,7 @@
   width: 0;
   z-index: 10;
   background-color: #000;
-  color: #fff;
+  color: #fcfcf6;
   overflow-x: hidden;
   transition: all 0.5s linear;
 }
@@ -40,7 +44,7 @@
   .nav {
     position: unset;
     width: 100%;
-    background: #fff;
+    background: #fcfcf6;
     color: #000;
     overflow-x: visible;
     padding: 0;
@@ -106,7 +110,7 @@
 }
 .column--dark {
   background: #000;
-  color: #fff;
+  color: #fcfcf6;
 }
 
 .nav.column--inner {
@@ -145,7 +149,7 @@
 .list__item::before {
   content: "›";
   position: absolute;
-  left: 0em;
+  left: 0;
   font-weight: bold;
 }
 @media screen and (min-width: 375px) {
@@ -159,7 +163,7 @@
   font-size: 1.1em;
 }
 .list__item--basic span {
-  color: #070085;
+  color: #5959fa;
   font-size: 1.2em;
   font-weight: 600;
   text-transform: uppercase;
@@ -187,8 +191,8 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #070085;
-  color: #fff;
+  background-color: #5959fa;
+  color: #fcfcf6;
 }
 @media screen and (min-width: 768px) {
   .column__box__icon {
@@ -218,7 +222,7 @@
   flex-direction: column;
   justify-content: flex-start;
   font-size: 2.5em;
-  color: #070085;
+  color: #5959fa;
 }
 @media screen and (min-width: 1024px) {
   .column__title--main {
@@ -228,7 +232,7 @@
 .column__title--medium {
   font-size: 1.5em;
   margin: 0.5em 0;
-  color: #070085;
+  color: #5959fa;
 }
 @media screen and (min-width: 1024px) {
   .column__title--medium {
@@ -338,8 +342,8 @@
 
 .btn {
   padding: 1em 0.5em;
-  background-color: #070085;
-  color: #fff;
+  background-color: #5959fa;
+  color: #fcfcf6;
   border: none;
   cursor: pointer;
 }
@@ -389,7 +393,7 @@
   margin: 10px 0;
   text-align: center;
   border-radius: 20px;
-  background-color: #070085;
+  background-color: #5959fa;
 }
 .line.hidden {
   display: block;
@@ -401,19 +405,19 @@
 }
 
 .scroll {
-  color: #070085;
+  color: #5959fa;
   text-decoration: none;
   cursor: pointer;
 }
 .scroll:hover {
-  color: #070085;
+  color: #5959fa;
 }
 
 .scroll--white {
-  color: #fff;
+  color: #fcfcf6;
 }
 .scroll--white:hover {
-  color: #070085;
+  color: #5959fa;
 }
 @media screen and (min-width: 1024px) {
   .scroll--white {

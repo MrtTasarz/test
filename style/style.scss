@@ -6,6 +6,10 @@
   font-family: $main-font;
 }
 
+body {
+  background-color: $secondary;
+}
+
 .wrapper {
   overflow-x: hidden;
 }
@@ -147,7 +151,7 @@
   &::before {
     content: "›";
     position: absolute;
-    left: 0em;
+    left: 0;
     font-weight: bold;
   }
 
